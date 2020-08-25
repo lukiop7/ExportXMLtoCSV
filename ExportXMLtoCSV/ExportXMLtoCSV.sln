@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportXMLtoCSV", "ExportXMLtoCSV\ExportXMLtoCSV.csproj", "{43D984AF-3264-47E7-8391-1C336D489AD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeserializationObjects", "DeserializationObjects\DeserializationObjects.csproj", "{C8BC960B-0A37-477D-AFFF-D26E77D54EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationObjects", "SerializationObjects\SerializationObjects.csproj", "{4907EAAC-064C-480C-A792-423C099DAA48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{43D984AF-3264-47E7-8391-1C336D489AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D984AF-3264-47E7-8391-1C336D489AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D984AF-3264-47E7-8391-1C336D489AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BC960B-0A37-477D-AFFF-D26E77D54EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BC960B-0A37-477D-AFFF-D26E77D54EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BC960B-0A37-477D-AFFF-D26E77D54EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BC960B-0A37-477D-AFFF-D26E77D54EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4907EAAC-064C-480C-A792-423C099DAA48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4907EAAC-064C-480C-A792-423C099DAA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4907EAAC-064C-480C-A792-423C099DAA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4907EAAC-064C-480C-A792-423C099DAA48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

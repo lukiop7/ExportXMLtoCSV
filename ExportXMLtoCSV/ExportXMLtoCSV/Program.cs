@@ -3,7 +3,9 @@ using System.ComponentModel;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml.Xsl;
-using ExportXMLtoCSV.ObjectClasses;
+using DeserializationObjects.ObjectClasses;
+using SerializationObjects;
+
 
 namespace ExportXMLtoCSV
 {

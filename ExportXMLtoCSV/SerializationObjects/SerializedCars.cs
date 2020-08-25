@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using ExportXMLtoCSV.ObjectClasses;
+using DeserializationObjects.ObjectClasses;
 
-namespace ExportXMLtoCSV
+namespace SerializationObjects
 {
     [Serializable]
     public class SerializedCars
@@ -13,7 +13,6 @@ namespace ExportXMLtoCSV
 
         [XmlAttribute("Manufacturer")]
         public string Manufacturer { get; set; }
-
 
         public List<Car> Cars { get; set; } = new List<Car>();
     }
