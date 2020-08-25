@@ -20,11 +20,14 @@ namespace ExportXMLtoCSV
     [Serializable]
     public class SerializedCar
     {
-        public SerializedCar(Car car)
+
+        public static implicit operator SerializedCar(Car car)
         {
-            this.VIN = car.VIN;
-            this.Model = car.Model;
-            this.ProductionYear = car.ProductionYear;
+            SerializedCar serializedCar = new SerializedCar();
+            serializedCar.VIN = car.VIN;
+            serializedCar.ProductionYear = car.ProductionYear;
+            serializedCar.Model = car.Model;
+            return serializedCar;
         }
 
         public string VIN { get; set; }
