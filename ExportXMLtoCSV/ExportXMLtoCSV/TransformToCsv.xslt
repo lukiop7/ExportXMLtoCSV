@@ -49,7 +49,14 @@
   </xsl:template>
 
   <xsl:template match="/">
-    <xsl:text>VIN;ProductionYear;Model;</xsl:text>
+    <xsl:call-template name="CsvEscape">
+      <xsl:with-param name="value" select="SerializedCars/@Date"/>
+    </xsl:call-template>
+    <xsl:text>;</xsl:text>
+    <xsl:call-template name="CsvEscape">
+      <xsl:with-param name="value" select="SerializedCars/@Manufacturer"/>
+    </xsl:call-template>
+    <xsl:text>;</xsl:text>
     <xsl:text>&#xA;</xsl:text>
     <xsl:for-each select="SerializedCars/Cars/SerializedCar">
       <xsl:call-template name="CsvEscape">
