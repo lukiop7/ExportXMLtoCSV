@@ -29,10 +29,11 @@ namespace ExportXMLtoCSV
                 var textWriter = new StreamWriter(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\config.xml");
                 serializer.Serialize(textWriter, serializedCars);
                 textWriter.Close();
-
+                var reportDate = result.Date.Replace(':', ';');
+                var reportName = $@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\{result.Manufacturer}_{reportDate.Substring(0,19)}.csv";
                 XslCompiledTransform transform = new XslCompiledTransform();
                 transform.Load(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\TransformToCsv.xslt");
-                transform.Transform(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\config.xml", @"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\output.csv");
+                transform.Transform(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\config.xml", reportName);
             }
         }
     }

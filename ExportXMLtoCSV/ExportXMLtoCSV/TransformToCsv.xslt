@@ -58,9 +58,9 @@
     </xsl:call-template>
     <xsl:text>;</xsl:text>
     <xsl:text>&#xA;</xsl:text>
-    <xsl:for-each select="SerializedCars/Cars/SerializedCar">
+    <xsl:for-each select="SerializedCars/Cars/Car">
       <xsl:call-template name="CsvEscape">
-        <xsl:with-param name="value" select="normalize-space(VIN)"/>
+        <xsl:with-param name="value" select="normalize-space(@VIN)"/>
       </xsl:call-template>
       <xsl:text>;</xsl:text>
       <xsl:call-template name="CsvEscape">
