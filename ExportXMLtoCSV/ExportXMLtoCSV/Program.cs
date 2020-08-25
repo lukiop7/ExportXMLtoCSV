@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.IO;
 using System.Xml.Serialization;
+using System.Xml.Xsl;
 using ExportXMLtoCSV.ObjectClasses;
 
 namespace ExportXMLtoCSV
@@ -29,6 +30,9 @@ namespace ExportXMLtoCSV
                 serializer.Serialize(textWriter, serializedCars);
                 textWriter.Close();
 
+                XslCompiledTransform transform = new XslCompiledTransform();
+                transform.Load(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\TransformToCsv.xslt");
+                transform.Transform(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\config.xml", @"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\output.csv");
             }
         }
     }

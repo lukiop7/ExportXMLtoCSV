@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SerializedCars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Date="2015-02-18T12:32:02.8036669+01:00" Manufacturer="Opel">
   <Cars>
-    <Car VIN="O002ABC002">
+    <SerializedCar>
+      <VIN>O002ABC002</VIN>
       <ProductionYear>2007</ProductionYear>
       <Model>Vectra</Model>
-      <Features>
-        <Feature Code="RXE">Reflektory xenonowe</Feature>
-        <Feature Code="SZW">Sportowe zawieszenie</Feature>
-        <Feature Code="SZD">Szyberdach</Feature>
-      </Features>
-    </Car>
-    <Car VIN="O004ABC004">
+    </SerializedCar>
+    <SerializedCar>
+      <VIN>O004ABC004</VIN>
       <ProductionYear>2005</ProductionYear>
       <Model>Astra</Model>
-      <Features>
-        <Feature Code="RXE">Reflektory xenonowe</Feature>
-      </Features>
-    </Car>
+    </SerializedCar>
   </Cars>
 </SerializedCars>

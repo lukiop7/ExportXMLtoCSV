@@ -14,6 +14,7 @@ namespace ExportXMLtoCSV
         [XmlAttribute("Manufacturer")]
         public string Manufacturer { get; set; }
 
+
         public List<SerializedCar> Cars { get; set; } = new List<SerializedCar>();
     }
 
