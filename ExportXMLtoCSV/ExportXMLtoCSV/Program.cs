@@ -10,16 +10,25 @@ namespace ExportXMLtoCSV
     {
         static void Main(string[] args)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(ProductionReport));
+            XmlSerializer deserializer = new XmlSerializer(typeof(ProductionReport));
             using (FileStream fileStream = new FileStream(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\ProductionResults.xml", FileMode.Open))
             {
-                ProductionReport result = (ProductionReport)serializer.Deserialize(fileStream);
-                foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(result))
-                {
-                    string name = descriptor.Name;
-                    object value = descriptor.GetValue(result);
-                    Console.WriteLine("{0}={1}", name, value);
+                ProductionReport result = (ProductionReport)deserializer.Deserialize(fileStream);
+                SerializedCars serializedCars = new SerializedCars();
+                serializedCars.Manufacturer = result.Manufacturer;
+                serializedCars.Date = result.Date;
+                foreach(Factory factory in result.Factories){
+                    foreach (Car car in factory.Cars)
+                    {
+                        serializedCars.Cars.Add(car);
+                    }
                 }
+                XmlSerializer serializer = new XmlSerializer(typeof(SerializedCars));
+
+                var textWriter = new StreamWriter(@"D:\Projekty_Wakacje\ExportXMLtoCSV\ExportXMLtoCSV\ExportXMLtoCSV\config.xml");
+                serializer.Serialize(textWriter, serializedCars);
+                textWriter.Close();
+
             }
         }
     }

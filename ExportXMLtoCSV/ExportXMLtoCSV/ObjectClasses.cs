@@ -51,6 +51,9 @@ namespace ExportXMLtoCSV
             [XmlAttribute("Code")] 
             public string Code { get; set; }
 
+            [XmlText]
+            public string Description { get; set; }
+
 
         }
     }
